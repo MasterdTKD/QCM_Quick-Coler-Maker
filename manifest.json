@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "QCM_Quick Color Maker",
+  "version": "2.1",
+  "description": "RGB・HSV・カラーコード変換・保存対応のカラーメーカー",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+
+  "permissions": ["storage"]
+}

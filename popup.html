@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Color Maker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" data-tab="rgb">RGB</button>
+    <button class="tab" data-tab="hsv">HSV</button>
+    <button class="tab" data-tab="picker">ピッカー</button>
+    <button class="tab" data-tab="saved">保存</button>
+    <button class="tab" data-tab="settings">設定</button>
+  </div>
+
+  <div class="tab-content" id="rgb-tab">
+    <label>R: <input type="number" id="r" min="0" max="255"> <input type="range" id="r-range" min="0" max="255"></label><br>
+    <label>G: <input type="number" id="g" min="0" max="255"> <input type="range" id="g-range" min="0" max="255"></label><br>
+    <label>B: <input type="number" id="b" min="0" max="255"> <input type="range" id="b-range" min="0" max="255"></label><br>
+    <button id="save-rgb">この色を保存</button>
+    <button id="copy-rgb">RGBコピー</button>
+    <div id="color-display" class="preview-box"></div>
+  </div>
+
+  <div class="tab-content" id="hsv-tab" style="display:none;">
+    <label>H: <input type="number" id="h" min="0" max="360"> <input type="range" id="h-range" min="0" max="360"></label><br>
+    <label>S: <input type="number" id="s" min="0" max="100"> <input type="range" id="s-range" min="0" max="100"></label><br>
+    <label>V: <input type="number" id="v" min="0" max="100"> <input type="range" id="v-range" min="0" max="100"></label><br>
+    <button id="save-hsv">この色を保存</button>
+    <button id="copy-hsv">HSVコピー</button>
+    <div id="hsv-display" class="preview-box"></div>
+  </div>
+
+  <div class="tab-content" id="picker-tab" style="display:none;">
+    <input type="color" id="color-picker" name="ピッカー" />
+    <label for="head"head></label>
+    <div class="preview-box" id="picker-display"></div>
+  </div>
+
+  <div class="tab-content" id="saved-tab" style="display:none;">
+    <div id="saved-colors"></div>
+  </div>
+
+  <div class="tab-content" id="settings-tab" style="display:none;">
+    <button id="toggle-theme">ダーク/ライト切り替え</button>
+    <button id="clear-saved">保存履歴を全削除</button>
+    <div class="credit"><a href="https://creativecommons.org">QCM-Quick Color Maker</a> © 2025 by <a href="https://creativecommons.org">Masterd</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
